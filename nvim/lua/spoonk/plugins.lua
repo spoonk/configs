@@ -87,6 +87,7 @@ return packer.startup(function(use)
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code action_tuples
 
   use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
 
   use {
     "nvim-treesitter/nvim-treesitter",
@@ -95,13 +96,14 @@ return packer.startup(function(use)
 
   use "joosepAlviste/nvim-ts-context-commentString"
 
-
-
   -- autoclose html tags
   use 'windwp/nvim-ts-autotag'
 
   -- smooth scrolling
   use 'karb94/neoscroll.nvim'
+
+  -- git integration
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

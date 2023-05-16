@@ -13,7 +13,7 @@ require "spoonk.alpha"
 require "spoonk.comment"
 require "spoonk.toggleterm"
 require "spoonk.autotag"
---[[ require('neoscroll').setup() ]]
+require "spoonk.gitsigns"
 
 require "spoonk.bufferline"
 
