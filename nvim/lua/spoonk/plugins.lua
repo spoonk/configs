@@ -58,9 +58,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
 
   -- dashboard
-  use {
-      'goolord/alpha-nvim',
-}
+  use { 'goolord/alpha-nvim', }
   -- color scheme
   use { "catppuccin/nvim", as = "catppuccin" }
   use { 'embark-theme/vim', as = 'embark' }
@@ -68,6 +66,7 @@ return packer.startup(function(use)
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
   use 'frenzyexists/aquarium-vim'
   use 'drewtempelmeyer/palenight.vim'
+  use 'NTBBloodbath/doom-one.nvim'
 -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -84,7 +83,12 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig"  -- enable LSP
   use "williamboman/mason.nvim" -- simple to use language server installer
   use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+  use "mfussenegger/nvim-jdtls"
+
+  -- formatting
   use 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code action_tuples
+  use('MunifTanjim/prettier.nvim')
+  use('MunifTanjim/eslint.nvim')
 
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
@@ -104,6 +108,25 @@ return packer.startup(function(use)
 
   -- git integration
   use "lewis6991/gitsigns.nvim"
+
+
+  -- symbol outline
+  use 'simrat39/symbols-outline.nvim'
+
+  use 'andweeb/presence.nvim'
+
+
+  --[[ use { 'neoclide/coc.nvim', branch='release' } ]]
+
+  -- vue language stuff
+  --[[ use { ]]
+  --[[   'yaegassy/coc-volar', ]]
+  --[[ } ]]
+  --[[]]
+  --[[ use { ]]
+  --[[   'yaegassy/coc-volar-tools', ]]
+  --[[ } ]]
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

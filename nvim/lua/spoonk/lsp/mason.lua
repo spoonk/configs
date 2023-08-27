@@ -7,6 +7,15 @@ local servers = {
   "lua_ls",
 	"pyright",
 	"jsonls",
+  "cmake",
+  "arduino_language_server",
+  "jdtls",
+  "gradle_ls",
+  "emmet_ls",
+  --[[ "vuels", ]] -- [[ for some reason volar is just better, vuels does nothing :O]]
+  "volar",
+  "csharp_ls",
+  "eslint"
 }
 
 local settings = {

@@ -129,10 +129,20 @@ _G.packer_plugins = {
     path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["doom-one.nvim"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
+    url = "https://github.com/NTBBloodbath/doom-one.nvim"
+  },
   embark = {
     loaded = true,
     path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/embark",
     url = "https://github.com/embark-theme/vim"
+  },
+  ["eslint.nvim"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -184,6 +194,11 @@ _G.packer_plugins = {
     path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-jdtls"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/nvim-jdtls",
+    url = "https://github.com/mfussenegger/nvim-jdtls"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -233,6 +248,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
+  },
+  ["prettier.nvim"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/prettier.nvim",
+    url = "https://github.com/MunifTanjim/prettier.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/home/spoonk/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,

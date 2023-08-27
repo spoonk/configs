@@ -26,9 +26,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 keymap("n", "<leader>nh", ":nohl<CR>", opts)
---keymap("n", "<leader>v", ":vsplit<CR>", opts) -- split window vertically
 keymap("n", "<C-\\>",  ":vsplit<CR>", opts) -- split window vertically
---keymap("n", "<leader>h", "<C-w>s", opts) -- split window horizontally
 keymap("n", "<C-w>", ":q<CR>", opts) --  close tab
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -6<CR>", opts)
@@ -74,3 +72,10 @@ keymap("n", "<c-g>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<C-b>", ":NvimTreeToggle<cr>", opts)
+
+
+-- symbols
+keymap("n", "<leader>s", ":SymbolsOutline<cr>", opts)
+-- prettier
+keymap("n", "<leader>p", ":Prettier<cr>", opts)
+
