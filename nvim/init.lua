@@ -1,23 +1,21 @@
-require "spoonk.options"
-require "spoonk.colorscheme"
-require "spoonk.keymaps"
-require "spoonk.plugins"
-require "spoonk.cmp"
-require "spoonk.lsp"
-require "spoonk.telescope"
-require "spoonk.treesitter"
-require "spoonk.autopairs"
-require "spoonk.nvimtree"
-require'nvim-tree'.setup {}
-require "spoonk.lualine"
-require "spoonk.alpha"
-require "spoonk.comment"
-require "spoonk.toggleterm"
-require "spoonk.autotag"
-require "spoonk.gitsigns"
-require("symbols-outline").setup()
---[[ require "spoonk.presence" ]]
-require "spoonk.prettier"
+require "core"
 
-require "spoonk.bufferline"
+local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
 
+if custom_init_path then
+  dofile(custom_init_path)
+end
+
+require("core.utils").load_mappings()
+
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+-- bootstrap lazy.nvim!
+if not vim.loop.fs_stat(lazypath) then
+  require("core.bootstrap").gen_chadrc_template()
+  require("core.bootstrap").lazy(lazypath)
+end
+
+dofile(vim.g.base46_cache .. "defaults")
+vim.opt.rtp:prepend(lazypath)
+require "plugins"
