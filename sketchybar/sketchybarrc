@@ -1,0 +1,100 @@
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+FONT="Hack Nerd Font"
+
+source "$CONFIG_DIR/colors.sh"
+PADDINGS=3 # All paddings use this value (icon, label, background)
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+bar=(
+  height=30
+  color=$TRANSPARENT
+  border_width=2
+  border_color=$TRANSPARENT
+  shadow=on
+  position=bottom
+  sticky=on
+  padding_right=40
+  padding_left=40
+  y_offset=0
+  # margin=780
+  topmost=window
+  corner_radius=100
+)
+
+sketchybar --bar "${bar[@]}"
+
+
+
+##### Changing Defaults #####
+# We now change some default values, which are applied to all further items.
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
+default=(
+ updates=when_shown
+  icon.font="$FONT:Bold:20.0"
+  icon.color=$ICON_COLOR
+  icon.padding_left=$PADDINGS
+  icon.padding_right=$PADDINGS
+  label.font="$FONT:Semibold:13.0"
+  label.color=$LABEL_COLOR
+  label.padding_left=$PADDINGS
+  label.padding_right=$PADDINGS
+  padding_right=$PADDINGS
+  padding_left=$PADDINGS
+  background.height=26
+  background.corner_radius=20
+  background.border_width=0
+  popup.background.border_width=2
+  popup.background.corner_radius=9
+  popup.background.border_color=$POPUP_BORDER_COLOR
+  popup.background.color=$POPUP_BACKGROUND_COLOR
+  popup.blur_radius=20
+  popup.background.shadow.drawing=on
+  scroll_texts=on
+
+)
+sketchybar --default "${default[@]}"
+
+##### Adding Mission Control Space Indicators #####
+# Let's add some mission control spaces:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# to indicate active and available mission control spaces.
+#
+#
+
+source "$CONFIG_DIR/plugins/spaces.sh"
+# source "$CONFIG_DIR/plugins/front_app.sh"
+# source "$CONFIG_DIR/plugins/test_spaces.sh"
+
+##### Adding Left Items #####
+
+# sketchybar --add item all_apps left \
+#            --set all_apps icon.drawing=off script="$PLUGIN_DIR/all_apps.sh" \
+#            --subscribe all_apps space_change
+#
+##### Adding Right Items #####
+# https://felixkratz.github.io/SketchyBar/config/events
+
+# sketchybar --add item clock right \
+#            --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
+#            --add item volume right \
+#            --set volume script="$PLUGIN_DIR/volume.sh" \
+#            --subscribe volume volume_change \
+#            --add item battery right \
+#            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+#            --subscribe battery system_woke power_source_change
+#
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
