@@ -17,7 +17,6 @@ M.ui = {
       bg = "#363a4f",
     },
   },
-  -- #aaaffsf
 
   cmp = {
     icons = true,
