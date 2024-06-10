@@ -9,6 +9,7 @@ local opts = {
       },
     },
 
+    -- null_ls.builtins.formatting.prettierd,
     null_ls.builtins.diagnostics.mypy.with {
       extra_args = function()
         local virtual = os.getenv "VIRTUAL_ENV" or os.getenv "CONDA_PREFIX" or "/usr"
@@ -16,11 +17,8 @@ local opts = {
       end,
     },
     null_ls.builtins.formatting.isort,
-    -- null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.stylua,
-    -- null_ls.builtins.formatting.prettier,
-    null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.formatting.eslint_d,
+    -- null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.formatting.google_java_format,
   },
   on_attach = function(client, bufnr)

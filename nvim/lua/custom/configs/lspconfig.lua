@@ -32,6 +32,11 @@ lspconfig.pyright.setup {
   filetypes = { "python" },
 }
 
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -51,7 +56,7 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
   init_options = {
     preferences = {
-      disableSuggestions = true,
+      disableSuggestions = false,
     },
   },
 
