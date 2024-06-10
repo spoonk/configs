@@ -5,6 +5,11 @@ return {
     return {
       { "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
       { "<leader>th", LazyVim.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with Preview" },
+      {
+        "<leader>sx",
+        require("telescope.builtin").resume,
+        { noremap = true, silent = true, desc = "Resume Search" },
+      },
     }
   end,
 }
