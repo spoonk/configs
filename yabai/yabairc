@@ -23,8 +23,8 @@ yabai -m config mouse_action1 move
 yabai -m config mouse_action2 resize
 
 
-yabai -m config window_animation_duration  0.5            \
-                window_animation_easing    ease_out_quint \
+yabai -m config window_animation_duration  0.0            \
+                # window_animation_easing    ease_out_quint \
 
 # when window is dropped in center of another window, swap them (on edges it will split it)
 yabai -m mouse_drop_action swap
