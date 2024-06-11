@@ -6,3 +6,5 @@ vim.keymap.set("n", "<C-\\>", ":vsplit<CR>")
 vim.keymap.set("n", "<C-t>", ":tabnew %<CR>")
 vim.keymap.set("n", "<C-q>", ":tabprevious<CR>")
 vim.keymap.set("n", "<C-e>", ":tabnext<CR>")
+
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })

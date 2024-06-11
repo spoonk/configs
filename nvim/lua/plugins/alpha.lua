@@ -6,7 +6,14 @@ return {
   opts = function()
     local dashboard = require("alpha.themes.dashboard")
     local logo = {
-
+      [[]],
+      [[]],
+      [[]],
+      [[]],
+      [[]],
+      [[]],
+      [[]],
+      [[]],
       [[ N  E  O  V  I  M ]],
     }
     dashboard.section.header.val = logo

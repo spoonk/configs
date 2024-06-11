@@ -10,3 +10,11 @@ vim.api.nvim_create_autocmd({ "BufRead" }, {
     vim.cmd("set nonumber norelativenumber")
   end,
 })
+
+vim.api.nvim_create_autocmd({ "SwapExists" }, {
+  callback = function()
+    vim.cmd("let v:swapchoice = 'e'")
+  end,
+})
+
+-- autocmd SwapExists * let v:swapchoice = "e"
