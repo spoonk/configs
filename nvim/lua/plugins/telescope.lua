@@ -3,12 +3,16 @@ return {
   -- replace all Telescope keymaps with only one mapping
   keys = function()
     return {
-      { "<C-p>", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-      { "<leader>th", LazyVim.telescope("colorscheme", { enable_preview = true }), desc = "Colorscheme with Preview" },
+      { "<C-p>", LazyVim.pick(), desc = "Find Files" },
       {
-        "<leader>sx",
-        require("telescope.builtin").resume,
-        { noremap = true, silent = true, desc = "Resume Search" },
+        "<leader>th",
+        LazyVim.pick("colorscheme", { enable_preview = true }),
+        desc = "Colorscheme with Preview",
+      },
+      {
+        "<C-g>",
+        LazyVim.pick("live_grep"),
+        desc = "live grep",
       },
     }
   end,
