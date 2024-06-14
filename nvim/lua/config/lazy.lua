@@ -45,3 +45,8 @@ require("lazy").setup({
     },
   },
 })
+
+-- rounded diagnostic borders
+vim.diagnostic.config({
+  float = { border = "rounded" },
+})
